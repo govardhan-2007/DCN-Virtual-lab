@@ -785,3 +785,40 @@ kbd { padding: 1px 6px; border: 1px solid var(--line-strong); border-bottom-widt
   .video-actions { align-items: stretch; }
   .video-watch-link { width: 100%; }
 }
+
+/* Permanent, non-editable team member details */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  margin-top: 18px;
+}
+
+.team-member {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(130px, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 15px 18px;
+  min-height: 66px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.member-name {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.member-roll {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
